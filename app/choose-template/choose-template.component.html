@@ -16,21 +16,23 @@
       </div>
     </div>
   </div>
-<mat-divider></mat-divider>
-<carousel [itemsPerSlide]="itemsPerSlide" [interval]="false" [noWrap]="false" [hidden]="!showTemplates">
-  <slide *ngFor="let template of templates; let index=index">
-    <mat-card class="template-card">
-      <mat-card-header>
-        <mat-card-title>{{template.name}} </mat-card-title>
-        <mat-card-subtitle>{{template.category}}</mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content>
-      <img mat-card-image src="https://bab-assets1.babapi.ooo/img/html_widget_images/8437262/28ba56ca5684a_doctemplate.png.999x200x.png"
-      width="200" alt="Bid Template">
-      </mat-card-content>
-    </mat-card>
-  </slide>
-</carousel>
+<div  [hidden]="!showTemplates">
+  <mat-divider></mat-divider>
+  <carousel [itemsPerSlide]="itemsPerSlide" [interval]="false" [noWrap]="false">
+    <slide *ngFor="let template of templates; let index=index">
+      <mat-card class="template-card">
+        <mat-card-header>
+          <mat-card-title>{{template.name}} </mat-card-title>
+          <mat-card-subtitle>{{template.category}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+        <img mat-card-image src="https://bab-assets1.babapi.ooo/img/html_widget_images/8437262/28ba56ca5684a_doctemplate.png.999x200x.png"
+        width="200" alt="Bid Template">
+        </mat-card-content>
+      </mat-card>
+    </slide>
+  </carousel>
+</div>
  
 
 
